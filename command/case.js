@@ -600,7 +600,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			zee.ttdownloader(nowem)
 			.then(result => {
 				const { wm, nowm, audio } = result
-				axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
+				axios.get(`https://apikeyrest-rizqi.herokuapp.com/docs/download/tiktok?url=${nowm}&apikey=Alphabot`)
 				.then(async (a) => {
 					me = `*Link* : ${a.data}`
 					noweem = await getBuffer(nowm)
@@ -618,7 +618,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			zee.ttdownloader(wem)
 			.then(result => {
 				const { wm, nowm, audio } = result
-				axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
+				axios.get(`https://apikeyrest-rizqi.herokuapp.com/docs/download/tiktok?url=${nowm}&apikey=Alphabot`)
 				.then(async (a) => {
 					me = `*Link* : ${a.data}`
 					weem = await getBuffer(wm)
@@ -636,7 +636,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			hx.ttdownloader(audi)
 			.then(result => {
 				const { wm, nowm, audio } = result
-				axios.get(`https://tinyurl.com/api-create.php?url=${audio}`)
+				axios.get(`https://apikeyrest-rizqi.herokuapp.com/docs/download/tiktok?url=${nowm}&apikey=Alphabot`)
 				.then(async (a) => {
 					audnha = await getBuffer(audio)
 					haruka.sendMessage(from,audnha , MessageType.document, {mimetype: 'audio/mp4',filename: `Tiktok Music.mp3`,quoted: mek})
